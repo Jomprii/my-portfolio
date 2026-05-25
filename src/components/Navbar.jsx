@@ -73,7 +73,8 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="resume.pdf"
+          href="/resume.pdf"
+          target="_blank"
           style={{
             fontFamily: "var(--font-mono)",
             fontSize: "0.75rem",
