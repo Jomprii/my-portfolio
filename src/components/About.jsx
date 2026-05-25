@@ -4,12 +4,15 @@ import { useRef } from "react";
 const skills = [
   {
     cat: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "C++", "PHP"],
+    items: ["JavaScript", "TypeScript", "Python", "PHP"],
   },
-  { cat: "Frontend", items: ["React", "Next.js", "Vite", "CSS/Tailwind"] },
+  { cat: "Frontend", items: ["React", "Next.js", "Vite", "Tailwindcss"] },
   { cat: "Backend", items: ["Node.js", "FastAPI", "MySQL"] },
-  { cat: "Tooling", items: ["Git", "Docker", "CI/CD"] },
-  { cat: "Design", items: ["Figma", "Canva", "Blender", "Adobe Photoshop"] },
+  { cat: "Mobile", items: ["React Native", "Flutter", "Kotlin"] },
+  {
+    cat: "Tools",
+    items: ["Git", "Docker", "Figma", "Canva", "Blender", "Adobe Photoshop"],
+  },
 ];
 
 function FadeIn({ children, delay = 0 }) {

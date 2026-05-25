@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Code, X, Globe, Mail } from "lucide-react";
+import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 function FadeIn({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -18,10 +19,18 @@ function FadeIn({ children, delay = 0 }) {
 }
 
 const socials = [
-  { icon: Code, label: "GitHub", href: "https://github.com" },
-  { icon: X, label: "Twitter / X", href: "https://twitter.com" },
-  { icon: Globe, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Mail, label: "Email", href: "mailto:alex@example.com" },
+  { icon: FaGithub, label: "GitHub", href: "https://github.com/Jomprii" },
+  {
+    icon: FaFacebook,
+    label: "Facebook",
+    href: "https://www.facebook.com/junefree.yamson.7",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/junefree-yamson-882568350/",
+  },
+  { icon: SiGmail, label: "Email", href: "Jyamson30@gmail.com" },
 ];
 
 export default function Contact() {
@@ -109,7 +118,7 @@ export default function Contact() {
                 marginBottom: "1.5rem",
               }}
             >
-              Got a crazy idea?, let's build it.
+              Got a wild idea?, let's build it.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color } from "framer-motion";
+import { ImFacebook2 } from "react-icons/im";
 
 const links = ["about", "projects", "contact"];
 
@@ -72,7 +73,7 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="/resume.pdf"
+          href="resume.pdf"
           style={{
             fontFamily: "var(--font-mono)",
             fontSize: "0.75rem",

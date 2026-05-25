@@ -5,21 +5,31 @@ import { ArrowUpRight, Code } from "lucide-react";
 const projects = [
   {
     num: "01",
-    title: "Nexus API Gateway",
-    desc: "High-performance API gateway with rate limiting, auth middleware, and real-time analytics. Handles 50k+ req/s with sub-5ms latency.",
-    tags: ["Go", "Redis", "Docker", "gRPC"],
-    year: "2024",
-    live: "#",
-    repo: "#",
+    title: "Tribu Pakaras",
+    desc: "Tribu Pakaras is an ecommerce outdoor apparel shop and its more than a brand—it’s a community built for those who move with purpose, passion, and courage.",
+    tags: ["Laravel", "Vue", "Inertia"],
+    year: "2026",
   },
   {
     num: "02",
-    title: "DataVault",
-    desc: "End-to-end encrypted file storage system. Zero-knowledge architecture means not even the server can read your files.",
-    tags: ["TypeScript", "Node.js", "PostgreSQL", "WebCrypto"],
+    title: "MCenter",
+    desc: "A Hospital System for a big hospital in dumaguete. Designed with purpose and ease of usability in mind.",
+    tags: ["Next.js", "Laravel", "MySQL"],
+    year: "2026",
+  },
+  {
+    num: "03",
+    title: "Gamersvue",
+    desc: "A platform where gamers can shop, share, trade and comment on a game that they love.",
+    tags: ["React Native", "FastAPI"],
+    year: "2025",
+  },
+  {
+    num: "04",
+    title: "Sweep",
+    desc: "Delete cluttered gallery pictured with ease, just sweep left to save or right to delete.",
+    tags: ["Flutter"],
     year: "2024",
-    live: "#",
-    repo: "#",
   },
 ];
 
