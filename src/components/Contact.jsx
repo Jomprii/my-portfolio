@@ -170,7 +170,7 @@ export default function Contact() {
                   color: "var(--text-muted)",
                   fontWeight: 300,
                   lineHeight: 1.8,
-                  marginBottom: "2.5rem",
+                  marginBottom: "2.3rem",
                   fontSize: "0.9rem",
                   alignItems: "center",
                   cursor: "pointer",
@@ -194,7 +194,7 @@ export default function Contact() {
                 color: "var(--text-muted)",
                 fontWeight: 300,
                 lineHeight: 1.8,
-                marginBottom: "2.5rem",
+                marginBottom: "2.2rem",
                 fontSize: "0.9rem",
               }}
             >
