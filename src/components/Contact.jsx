@@ -1,6 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaFacebook,
+  FaPhoneAlt,
+  FaInstagram,
+} from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 function FadeIn({ children, delay = 0 }) {
@@ -30,7 +36,11 @@ const socials = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/junefree-yamson-882568350/",
   },
-  { icon: SiGmail, label: "Email", href: "Jyamson30@gmail.com" },
+  {
+    icon: FaInstagram,
+    label: "Email",
+    href: "https://www.instagram.com/_jompri",
+  },
 ];
 
 export default function Contact() {
@@ -111,15 +121,61 @@ export default function Contact() {
           <FadeIn delay={0.1}>
             <p
               style={{
-                fontSize: "1.2rem",
+                fontSize: "1.3rem",
                 fontWeight: 300,
                 lineHeight: 1.4,
                 letterSpacing: "-0.02em",
                 marginBottom: "1.5rem",
               }}
             >
-              Got a wild idea?, let's build it.
+              Got a wild idea? let me help you build it.
             </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p
+              style={{
+                display: "flex",
+                color: "var(--text-muted)",
+                fontWeight: 300,
+                lineHeight: 1.8,
+                marginBottom: "0.5rem",
+                fontSize: "0.9rem",
+                alignItems: "center",
+                userSelect: "all",
+              }}
+            >
+              <FaPhoneAlt size={15} style={{ marginRight: 10 }} /> +63 962 4224
+              861
+            </p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jyamson30@gmail.com"
+              target={"_blank"}
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <p
+                style={{
+                  display: "flex",
+                  color: "var(--text-muted)",
+                  fontWeight: 300,
+                  lineHeight: 1.8,
+                  marginBottom: "2.5rem",
+                  fontSize: "0.9rem",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  transition: "color 0.2s",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.color = "var(--accent)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.color = "var(--text-muted)")
+                }
+              >
+                <SiGmail size={15.5} style={{ marginRight: 10 }} />
+                Jyamson30@gmail.com
+              </p>
+            </a>
           </FadeIn>
           <FadeIn delay={0.2}>
             <p
@@ -154,6 +210,7 @@ export default function Contact() {
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "var(--text-dim)")
                   }
+                  target={"_blank"}
                 >
                   <Icon size={18} />
                 </a>

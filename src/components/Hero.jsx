@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
@@ -12,7 +13,42 @@ const item = {
   },
 };
 
+const roles = [
+  "Full-Stack Web Developer",
+  "Mobile Developer",
+  "Designer",
+  "Problem Solver",
+];
+
 export default function Hero() {
+  const [text, setText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[roleIndex];
+    const speed = isDeleting ? 50 : 100;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setText(current.substring(0, text.length + 1));
+
+        if (text === current) {
+          setTimeout(() => setIsDeleting(true), 1200);
+        }
+      } else {
+        setText(current.substring(0, text.length - 1));
+
+        if (text === "") {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, roleIndex]);
+
   return (
     <section
       id="hero"
@@ -79,7 +115,22 @@ export default function Hero() {
             color: "var(--text-muted)",
           }}
         >
-          Full-Stack Web Developer.
+          {text}
+
+          <motion.span
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{
+              duration: 0.8,
+              repeat: Infinity,
+            }}
+            style={{
+              display: "inline-block",
+              marginLeft: "4px",
+              color: "var(--accent)",
+            }}
+          >
+            |
+          </motion.span>
         </motion.h1>
 
         <motion.p
@@ -179,6 +230,8 @@ export default function Hero() {
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             writingMode: "vertical-rl",
+            cursor: "default",
+            userSelect: "none",
           }}
         >
           scroll
