@@ -6,9 +6,11 @@ const projects = [
   {
     num: "01",
     title: "Tribu Pakaras",
-    desc: "Tribu Pakaras is an ecommerce outdoor apparel shop and its more than a brand—it’s a community built for those who move with purpose, passion, and courage.",
-    tags: ["Laravel", "Vue", "Inertia"],
+    desc: "Tribu Pakaras is an ecommerce outdoor apparel shop and its more than just a brand—it’s a community built for those who move with purpose, passion, and courage.",
+    tags: ["Laravel", "Vue", "MySQL"],
     year: "2026",
+    live: "#",
+    repo: "#",
   },
   {
     num: "02",
@@ -16,6 +18,8 @@ const projects = [
     desc: "A Hospital System for a big hospital in dumaguete. Designed with purpose and ease of usability in mind.",
     tags: ["Next.js", "Laravel", "MySQL"],
     year: "2026",
+    live: "#",
+    repo: "#",
   },
   {
     num: "03",
@@ -23,6 +27,8 @@ const projects = [
     desc: "A platform where gamers can shop, share, trade and comment on a game that they love.",
     tags: ["React Native", "FastAPI"],
     year: "2025",
+    live: "#",
+    repo: "#",
   },
   {
     num: "04",
@@ -30,6 +36,8 @@ const projects = [
     desc: "Delete cluttered gallery pictured with ease, just sweep left to save or right to delete.",
     tags: ["Flutter"],
     year: "2024",
+    live: "#",
+    repo: "#",
   },
 ];
 

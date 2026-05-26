@@ -27,7 +27,6 @@ export default function Hero() {
         position: "relative",
       }}
     >
-      {/* Grid decoration */}
       <div
         style={{
           position: "absolute",
@@ -119,6 +118,7 @@ export default function Hero() {
               textDecoration: "none",
               letterSpacing: "0.05em",
               display: "inline-block",
+              zIndex: 100,
             }}
           >
             View Work →
@@ -150,7 +150,6 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll hint */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
