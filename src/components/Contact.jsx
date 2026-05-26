@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FaLinkedin,
   FaGithub,
@@ -45,12 +46,22 @@ const socials = [
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const form = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Replace with real form logic (e.g. Formspree, EmailJS)
-    setSent(true);
+
+    emailjs
+      .sendForm("service_2pm3vvn", "template_x0bsjsq", form.current, {
+        publicKey: "bsNA2od9lYjXMZ9Hq",
+      })
+      .then((response) => {
+        console.log("SUCCESS!", response);
+        setSent(true);
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+      });
   }
 
   const inputStyle = {
@@ -251,6 +262,7 @@ export default function Contact() {
             </div>
           ) : (
             <form
+              ref={form}
               onSubmit={handleSubmit}
               style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
@@ -258,38 +270,38 @@ export default function Contact() {
                 required
                 type="text"
                 placeholder="Name"
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                name="name"
                 style={inputStyle}
                 onFocus={(e) =>
                   (e.target.style.borderColor = "var(--text-muted)")
                 }
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
               />
+
               <input
                 required
                 type="email"
                 placeholder="Email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                name="email"
                 style={inputStyle}
                 onFocus={(e) =>
                   (e.target.style.borderColor = "var(--text-muted)")
                 }
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
               />
+
               <textarea
                 required
                 placeholder="Message"
                 rows={5}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                name="message"
                 style={{ ...inputStyle, resize: "vertical" }}
                 onFocus={(e) =>
                   (e.target.style.borderColor = "var(--text-muted)")
                 }
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
               />
+
               <button
                 type="submit"
                 style={{
