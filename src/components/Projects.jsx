@@ -33,7 +33,7 @@ const projects = [
   {
     num: "04",
     title: "Sweep",
-    desc: "Delete cluttered gallery pictured with ease, just sweep left to save or right to delete.",
+    desc: "Delete cluttered gallery pictured with ease, just swipe left to delete and right to right.",
     tags: ["Flutter"],
     year: "2024",
     live: "#",
