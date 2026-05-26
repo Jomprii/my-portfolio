@@ -48,7 +48,7 @@ export default function Navbar() {
           letterSpacing: "0.05em",
         }}
       >
-        Jomprii.portfolio
+        Jomprii.dev
       </a>
 
       {/* Desktop links */}
